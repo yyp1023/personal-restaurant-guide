@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>edit</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <h1>Edit Restaurant</h1>
+
+  <form [formGroup]="formData" (ngSubmit)="onSubmit()">
+    <ion-list>
+      <ion-item>
+        <ion-label>Restaurant Name:</ion-label>
+        <ion-input formControlName="name"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Address:</ion-label>
+        <ion-input formControlName="address"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Phone #:</ion-label>
+        <ion-input formControlName="phone"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Description:</ion-label>
+        <ion-input formControlName="description"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>TAGs:</ion-label>
+        <ion-input formControlName="tags"></ion-input>
+      </ion-item>
+    </ion-list>
+
+    <button mat-raised-button type="submit" (click)="close()">Save</button>
+  </form>
+  <button mat-raised-button (click)="close()">Cancel</button>
+</ion-content>

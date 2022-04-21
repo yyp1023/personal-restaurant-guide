@@ -1,7 +1,8 @@
 {
   "name": "personal-restaurant-guide",
   "integrations": {
-    "capacitor": {}
+    "capacitor": {},
+    "cordova": {}
   },
   "type": "angular"
 }

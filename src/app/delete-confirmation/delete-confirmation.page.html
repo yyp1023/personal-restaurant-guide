@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Delete Confirmation</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <mat-card>
+    <mat-card-title>Are you sure you want to delete {{data.name}}?</mat-card-title>
+    <mat-card-actions align="end">
+      <button mat-button (click)="removeItem(data)" class="red">Yes</button>
+      <button mat-raised-button (click)="close()"> No</button>
+    </mat-card-actions>
+  </mat-card>
+</ion-content>

@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{ data.name }}'s details</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <mat-card class="example-card">
+    <mat-card-header>
+      <div>
+        <mat-card-title><strong>Restaurant's name: </strong>{{ data.name }}</mat-card-title>
+        <br>
+        <mat-card-subtitle><strong>Phone #: </strong>{{ data.phone }}</mat-card-subtitle>
+      </div>
+    </mat-card-header>
+    <mat-card-content>
+      <p>Description:</p>
+      <p class="desc">
+        {{ data.description }}
+      </p>
+      <p class="address">
+        {{ data.address }}
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button (click)="getDirection()">Map</button>
+      <button mat-button (click)="close()">Close</button>
+    </mat-card-actions>
+  </mat-card>
+</ion-content>

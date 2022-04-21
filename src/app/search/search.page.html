@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>search</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-searchbar
+                placeholder="search restaurant.."
+                [(ngModel)]="searchTerm"
+                showCancelButton="focus"
+                animated></ion-searchbar>
+
+  <ion-list>
+    <ion-item>
+      <ion-label class="bold">Name</ion-label>
+      <ion-label class="bold">Description</ion-label>
+      <ion-label class="bold">TAGs</ion-label>
+    </ion-item>
+    <ion-item *ngFor="let restaurant of restaurants | filter: searchTerm">
+      <ion-label> {{ restaurant.name }}</ion-label>
+      <ion-label> {{ restaurant.description }}</ion-label>
+      <ion-label> {{ restaurant.tags }}</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>list</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-margin">
+  <ion-item lines="none">
+  <button mat-raised-button color="primary" size="small" slot="end" (click)="openAdd()">
+    Add
+  </button>
+</ion-item>
+  <ion-grid >
+    <ion-row>
+      <ion-col>#</ion-col>
+      <ion-col>Restaurant</ion-col>
+      <ion-col>Actions</ion-col>
+      <ion-col></ion-col>
+    </ion-row>
+    <ion-row *ngFor="let restaurant of restaurants; index as i">
+      <ion-col>{{ i + 1 }}</ion-col>
+      <ion-col (click)="openDetails(restaurant)">{{ restaurant.name }}</ion-col>
+      <ion-col>
+        <button mat-button color="primary" (click)="openEdit(restaurant, i)">Edit</button>
+      </ion-col>
+      <ion-col>
+        <button mat-button class="red" color="warn" (click)="openDialog(i)">Delete</button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
